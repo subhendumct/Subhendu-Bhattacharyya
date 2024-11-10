@@ -3,59 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Subhendu Bhattacharyya - Personal Website</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Subhendu Bhattacharyya's Profile</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f8ff;
+            color: #333;
+        }
+        .container {
+            display: flex;
+            flex-wrap: nowrap;
+            height: 100vh;
+        }
+        .tabs {
+            width: 25%;
+            background: #333;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+        }
+        .tabs button {
+            padding: 20px;
+            border: none;
+            background: #444;
+            color: #fff;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background 0.3s;
+        }
+        .tabs button:hover {
+            background: #555;
+        }
+        .tabs button.active {
+            background: #007acc;
+        }
+        .content {
+            width: 75%;
+            padding: 30px;
+            position: relative;
+        }
+        .profile-pic {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 300px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            color: #007acc;
+        }
+        ul {
+            list-style-type: square;
+            margin-left: 20px;
+        }
+        /* Sparkle effect */
+        .sparkle:hover {
+            animation: sparkle 0.8s ease-in-out infinite;
+        }
+        @keyframes sparkle {
+            0%, 100% { text-shadow: 2px 2px 5px #ffda79; }
+            50% { text-shadow: 4px 4px 10px #ffd700; }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <!-- Navigation Menu -->
-        <nav>
-            <ul>
-                <li><a href="#about" onclick="showTab('about')">About Me</a></li>
-                <li><a href="#certifications" onclick="showTab('certifications')">Certifications</a></li>
-                <li><a href="#facts" onclick="showTab('facts')">Facts About Me</a></li>
-            </ul>
-        </nav>
-
-        <!-- Content Sections -->
-        <div id="content">
-            <!-- About Me Section -->
-            <section id="about" class="tab-content active">
-                <h2>About Me</h2>
-                <p>Hello! I'm Subhendu Bhattacharyya, a Senior Cloud Architect with over 11 years of experience in cloud solutions, specializing in Azure, Terraform, and AI integrations. I am passionate about technology, learning new skills, and finding innovative solutions to complex problems. I'm also a coffee enthusiast and love exploring stock investments.</p>
-            </section>
-
-            <!-- Certifications Section -->
-            <section id="certifications" class="tab-content">
-                <h2>Certifications</h2>
-                <ul>
-                    <li>Microsoft Certified Trainer</li>
-                    <li>MCSE: Cloud Platform and Infrastructure</li>
-                    <li>Google Cloud Authorized Trainer</li>
-                    <li>Azure Solutions Architect Expert</li>
-                    <li>Terraform and DevOps Specialist</li>
-                </ul>
-            </section>
-
-            <!-- Facts About Me Section -->
-            <section id="facts" class="tab-content">
-                <h2>Facts About Me</h2>
-                <ul>
-                    <li>I have set up Azure Virtual Desktops for 1000+ users.</li>
-                    <li>I'm an investor in the Indian stock market with a focus on government vision.</li>
-                    <li>My passion projects include learning AI and developing my own chatbot on Azure.</li>
-                    <li>Founder of Bong Innovations OPC Pvt Ltd, with a mission to redefine what backbenchers can achieve.</li>
-                    <li>I enjoy experimenting with hardware projects and IoT.</li>
-                </ul>
-            </section>
+        <div class="tabs">
+            <button class="tab-btn active" onclick="showTab('about')">About Me</button>
+            <button class="tab-btn" onclick="showTab('achievements')">Professional Achievements</button>
+            <button class="tab-btn" onclick="showTab('certifications')">Certifications</button>
+            <button class="tab-btn" onclick="showTab('facts')">Facts About Me</button>
         </div>
 
-        <!-- Profile Picture -->
-        <div class="profile-picture">
-            <img src="./your_profile_picture.jpg" alt="Profile Picture">
+        <div class="content">
+            <!-- About Me Section -->
+            <div id="about" class="tab-content sparkle">
+                <h1>About Me</h1>
+                <p>An enthusiastic Cloud Architect boasting over a decade of extensive expertise across diverse Microsoft Infrastructure Solutions, including the training sector. A forward-looking IT specialist with a proven track record of crafting efficient hybrid IT managed services and steering the implementation of expansive, intricate global IT infrastructure projects. Proficient in devising infrastructure strategies and facilitating transformations, adept at pinpointing critical solution gaps, business implications, and project impacts, while devising innovative approaches to guarantee on-time, budget-conscious project delivery.</p>
+                <p>A seasoned leader well-versed in deploying architectural methodologies and executing organizational shifts to enhance architecture workflows in response to evolving business requisites.</p>
+                <img src="profile.jpg" alt="Subhendu Bhattacharyya" class="profile-pic">
+            </div>
+
+            <!-- Professional Achievements Section -->
+            <div id="achievements" class="tab-content" style="display:none;">
+                <h1>Professional Achievements</h1>
+                <ul>
+                    <li>Orchestrated the seamless consolidation of Vectrus' global datacenter infrastructure into the Azure cloud platform.</li>
+                    <li>Spearheaded the strategic Application Modernization initiative, transitioning programs from On-Premises to Azure PaaS solutions.</li>
+                    <li>Designed a pristine Azure Government Environment, aligned with NIST 800-171 security standards.</li>
+                    <li>Developed the bespoke OneApp using PowerShell to streamline 12 mission-critical processes.</li>
+                    <li>Executed a cost optimization initiative, reducing expenditures by 30%.</li>
+                    <li>Revamped DFS file share models using AzureFileShare and AzureFileSync.</li>
+                    <li>Created a ChatBOT for Vectrus service desk automation.</li>
+                    <li>Implemented Azure Virtual Desktop infrastructure for remote workers.</li>
+                    <li>Revamped VM disk encryption processes to align with Microsoft's security standards.</li>
+                    <li>Collaborated with DevOps and DevSecOps teams to deploy CI/CD pipelines and align security requirements.</li>
+                </ul>
+            </div>
+
+            <!-- Certifications Section -->
+            <div id="certifications" class="tab-content" style="display:none;">
+                <h1>Certifications</h1>
+                <ul>
+                    <li>Google Cloud Authorized Trainer</li>
+                    <li>Microsoft Certified Trainer</li>
+                    <li>MCSE: Cloud Platform and Infrastructure</li>
+                    <li>Azure Solutions Architect Expert</li>
+                </ul>
+            </div>
+
+            <!-- Facts About Me Section -->
+            <div id="facts" class="tab-content" style="display:none;">
+                <h1>Facts About Me</h1>
+                <ul>
+                    <li>Cloud enthusiast with over 11 years of experience.</li>
+                    <li>Lifelong learner with a passion for AI and machine learning.</li>
+                    <li>Coffee lover and avid supporter of sustainability initiatives.</li>
+                </ul>
+            </div>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        function showTab(tabId) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => content.style.display = 'none');
+            
+            document.getElementById(tabId).style.display = 'block';
+            
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            
+            event.currentTarget.classList.add('active');
+        }
+    </script>
 </body>
 </html>
