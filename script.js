@@ -19,3 +19,10 @@ document.addEventListener("mousemove", (e) => {
     document.body.appendChild(sparkle);
     setTimeout(() => sparkle.remove(), 500);
 });
+
+// Mousemove Color Change Effect
+document.addEventListener("mousemove", (event) => {
+    const x = event.clientX / window.innerWidth;
+    const y = event.clientY / window.innerHeight;
+    document.body.style.backgroundColor = `rgba(${200 + x * 55}, ${150 + y * 55}, ${255 - x * 100}, 0.8)`;
+});
