@@ -3,146 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Subhendu Bhattacharyya's Profile</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            background: #f0f8ff;
-            color: #333;
-        }
-        .container {
-            display: flex;
-            flex-wrap: nowrap;
-            height: 100vh;
-        }
-        .tabs {
-            width: 25%;
-            background: #333;
-            color: #fff;
-            display: flex;
-            flex-direction: column;
-        }
-        .tabs button {
-            padding: 20px;
-            border: none;
-            background: #444;
-            color: #fff;
-            cursor: pointer;
-            font-size: 18px;
-            transition: background 0.3s;
-        }
-        .tabs button:hover {
-            background: #555;
-        }
-        .tabs button.active {
-            background: #007acc;
-        }
-        .content {
-            width: 75%;
-            padding: 30px;
-            position: relative;
-        }
-        .profile-pic {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            width: 300px;
-            height: auto;
-            border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        h1 {
-            color: #007acc;
-        }
-        ul {
-            list-style-type: square;
-            margin-left: 20px;
-        }
-        /* Sparkle effect */
-        .sparkle:hover {
-            animation: sparkle 0.8s ease-in-out infinite;
-        }
-        @keyframes sparkle {
-            0%, 100% { text-shadow: 2px 2px 5px #ffda79; }
-            50% { text-shadow: 4px 4px 10px #ffd700; }
-        }
-    </style>
+    <title>Subhendu Bhattacharyya - Personal Website</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <div class="tabs">
-            <button class="tab-btn active" onclick="showTab('about')">About Me</button>
-            <button class="tab-btn" onclick="showTab('achievements')">Professional Achievements</button>
-            <button class="tab-btn" onclick="showTab('certifications')">Certifications</button>
-            <button class="tab-btn" onclick="showTab('facts')">Facts About Me</button>
-        </div>
+        <!-- Navigation Menu -->
+        <nav>
+            <ul>
+                <li><a href="#about" onclick="showTab('about')">About Me</a></li>
+                <li><a href="#achievements" onclick="showTab('achievements')">Professional Achievements</a></li>
+                <li><a href="#certifications" onclick="showTab('certifications')">Certifications</a></li>
+                <li><a href="#facts" onclick="showTab('facts')">Facts About Me</a></li>
+            </ul>
+        </nav>
 
-        <div class="content">
+        <!-- Content Sections -->
+        <div id="content">
             <!-- About Me Section -->
-            <div id="about" class="tab-content sparkle">
-                <h1>About Me</h1>
-                <p>An enthusiastic Cloud Architect boasting over a decade of extensive expertise across diverse Microsoft Infrastructure Solutions, including the training sector. A forward-looking IT specialist with a proven track record of crafting efficient hybrid IT managed services and steering the implementation of expansive, intricate global IT infrastructure projects. Proficient in devising infrastructure strategies and facilitating transformations, adept at pinpointing critical solution gaps, business implications, and project impacts, while devising innovative approaches to guarantee on-time, budget-conscious project delivery.</p>
-                <p>A seasoned leader well-versed in deploying architectural methodologies and executing organizational shifts to enhance architecture workflows in response to evolving business requisites.</p>
-                <img src="profile.jpg" alt="Subhendu Bhattacharyya" class="profile-pic">
-            </div>
+            <section id="about" class="tab-content active">
+                <h2>About Me</h2>
+                <p>An enthusiastic Cloud Architect boasting over a decade of extensive expertise across diverse Microsoft Infrastructure Solutions, including the training sector. A forward-looking IT specialist with a proven track record of crafting efficient hybrid IT managed services and steering the implementation of expansive, intricate global IT infrastructure projects.</p>
+                <p>Proficient in devising infrastructure strategies and facilitating transformations, adept at pinpointing critical solution gaps, business implications, and project impacts, while devising innovative approaches to guarantee on-time, budget-conscious project delivery. A seasoned leader well-versed in deploying architectural methodologies and executing organizational shifts to enhance architecture workflows in response to evolving business requisites.</p>
+            </section>
 
             <!-- Professional Achievements Section -->
-            <div id="achievements" class="tab-content" style="display:none;">
-                <h1>Professional Achievements</h1>
+            <section id="achievements" class="tab-content">
+                <h2>Professional Achievements</h2>
                 <ul>
-                    <li>Orchestrated the seamless consolidation of Vectrus' global datacenter infrastructure into the Azure cloud platform.</li>
-                    <li>Spearheaded the strategic Application Modernization initiative, transitioning programs from On-Premises to Azure PaaS solutions.</li>
-                    <li>Designed a pristine Azure Government Environment, aligned with NIST 800-171 security standards.</li>
-                    <li>Developed the bespoke OneApp using PowerShell to streamline 12 mission-critical processes.</li>
-                    <li>Executed a cost optimization initiative, reducing expenditures by 30%.</li>
-                    <li>Revamped DFS file share models using AzureFileShare and AzureFileSync.</li>
-                    <li>Created a ChatBOT for Vectrus service desk automation.</li>
-                    <li>Implemented Azure Virtual Desktop infrastructure for remote workers.</li>
-                    <li>Revamped VM disk encryption processes to align with Microsoft's security standards.</li>
-                    <li>Collaborated with DevOps and DevSecOps teams to deploy CI/CD pipelines and align security requirements.</li>
+                    <li>	Data Center Consolidation: Led migration of Vectrus’ global datacenter infrastructure to Azure, transitioning workloads from on-premises to cloud.	</li>
+<li>	Azure Landing Zone and CAF: Implemented Azure Landing Zone aligned with the Cloud Adoption Framework (CAF) to standardize cloud adoption and governance.	</li>
+<li>	Azure Government Environment: Designed a secure Azure Government environment compliant with NIST 800-171.	</li>
+<li>	Application Modernization: Transitioned programs from on-premises to Azure PaaS, boosting ROI, stability, and availability.	</li>
+<li>	Azure File Services Migration: Migrated from DFS to AzureFileShare and AzureFileSync, enhancing data accessibility and management.	</li>
+<li>	Cloud Assessment and Cost Optimization: Assessed and documented cloud environment for optimized decision-making; achieved a 30% cost reduction.	</li>
+<li>	Standardization of Naming and Policies: Updated naming conventions, tagging policies, RSV, and Key Vaults to align with business standards.	</li>
+<li>	OneApp Development: Developed “OneApp” using PowerShell to automate 12 daily processes, increasing operational efficiency.	</li>
+<li>	Service Desk ChatBOT: Created a ChatBOT to automate repetitive service desk tasks, improving support efficiency.	</li>
+<li>	Azure Virtual Desktop: Designed and deployed Azure Virtual Desktop infrastructure for global remote collaboration.	</li>
+<li>	VM Security and Reliability: Enhanced VM disk encryption to meet Microsoft’s security standards and strengthened VM reliability with SLA-backed configurations using PowerShell.	</li>
+<li>	DevSecOps Integration: Collaborated with DevSecOps to integrate security protocols within CI/CD workflows, ensuring regulatory compliance.	</li>
+<li>	CI/CD Pipeline Deployment: Built CI/CD pipelines with Azure DevOps and GitHub Actions, optimizing deployment efficiency.	</li>
+<li>	Terraform Automation: Led Terraform-based automation for consistent Azure resource provisioning, enabling scalability.	</li>
+<li>	GitHub Collaboration: Managed code and collaboration on GitHub, enhancing version control and development workflows.	</li>
+<li>	Azure DevOps Optimization: Streamlined workflows on Azure DevOps, boosting deployment speed and team productivity.	</li>
+<li>	Proof of Concept (POC) Development: Created and presented targeted Proof of Concepts (POCs) for the Senior Leadership Team, demonstrating potential solutions and innovations to address strategic objectives and align with organizational goals.	</li>
+<li>	Cloud Training: Led training sessions for internal teams to build cloud readiness, equipping them with the necessary skills and knowledge to facilitate a smooth transition to Azure and support ongoing cloud initiatives.	</li>
+
+
                 </ul>
-            </div>
+            </section>
 
             <!-- Certifications Section -->
-            <div id="certifications" class="tab-content" style="display:none;">
-                <h1>Certifications</h1>
+            <section id="certifications" class="tab-content">
+                <h2>Certifications</h2>
                 <ul>
-                    <li>Google Cloud Authorized Trainer</li>
-                    <li>Microsoft Certified Trainer</li>
-                    <li>MCSE: Cloud Platform and Infrastructure</li>
-                    <li>Azure Solutions Architect Expert</li>
+                    <li>	Microsoft Certified Trainer (MCT)	</li>
+                    <li>	Microsoft Azure Architect Technologies	</li>
+                    <li>	Microsoft Certified: Azure Administrator Associate	</li>
+                    <li>	Microsoft Certified: Azure Fundamentals	</li>
+                    <li>	Microsoft Specialist: Implementing Microsoft Azure Infrastructure Solutions	</li>
+                    <li>	Microsoft® Certified Solutions Expert (MCSE): Cloud Platform and Infrastructure	</li>
+                    <li>	Microsoft® Certified Solutions Associate (MCSA): Windows Server 2012	</li>
+                    <li>	Terraform for Azure (Instructor-Led Training)	</li>
+                    <li>	Google Cloud Certified – Professional Cloud Architect (Renewal Pending)	</li>
+                    <li>	Google Certified Cloud Instructor (Renewal Pending) .	</li> 
                 </ul>
-            </div>
+            </section>
 
             <!-- Facts About Me Section -->
-            <div id="facts" class="tab-content" style="display:none;">
-                <h1>Facts About Me</h1>
+            <section id="facts" class="tab-content">
+                <h2>Facts About Me</h2>
                 <ul>
-                    <li>Cloud enthusiast with over 11 years of experience.</li>
-                    <li>Lifelong learner with a passion for AI and machine learning.</li>
-                    <li>Coffee lover and avid supporter of sustainability initiatives.</li>
+                    <li>I have set up Azure Virtual Desktops for 1000+ users.</li>
+                    <li>I'm an investor in the Indian stock market with a focus on government vision.</li>
+                    <li>My passion projects include learning AI and developing my own chatbot on Azure.</li>
+                    <li>Founder of Bong Innovations OPC Pvt Ltd, with a mission to redefine what backbenchers can achieve.</li>
+                    <li>I enjoy experimenting with hardware projects and IoT.</li>
                 </ul>
-            </div>
+            </section>
+        </div>
+
+        <!-- Profile Picture -->
+        <div class="profile-picture">
+            <img src="images/your_profile_picture.jpeg" alt="Profile Picture">
         </div>
     </div>
 
-    <script>
-        function showTab(tabId) {
-            const contents = document.querySelectorAll('.tab-content');
-            contents.forEach(content => content.style.display = 'none');
-            
-            document.getElementById(tabId).style.display = 'block';
-            
-            const buttons = document.querySelectorAll('.tab-btn');
-            buttons.forEach(btn => btn.classList.remove('active'));
-            
-            event.currentTarget.classList.add('active');
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
