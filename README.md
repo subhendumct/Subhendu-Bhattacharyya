@@ -54,7 +54,7 @@ Step 1: Fork and Clone the Repository
 	1.	Fork this repository to your own GitHub account.
 	2.	Clone the repository to your local machine:
 
-git clone https://github.com/yourusername/your-repository.git
+git clone https://github.com/subhendumct/Subhendu-Bhattacharyya.git
 cd your-repository
 
 
