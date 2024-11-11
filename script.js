@@ -5,24 +5,45 @@ function showTab(tabId) {
     document.getElementById(tabId).classList.add('active');
 }
 
-// Set default tab to "About Me"
+// Set default tab on page load
 document.addEventListener("DOMContentLoaded", () => {
     showTab('about');
 });
 
-// Sparkle Effect
-document.addEventListener("mousemove", (e) => {
-    const sparkle = document.createElement("div");
-    sparkle.classList.add("sparkle");
-    sparkle.style.left = `${e.clientX}px`;
-    sparkle.style.top = `${e.clientY}px`;
-    document.body.appendChild(sparkle);
-    setTimeout(() => sparkle.remove(), 500);
-});
+window.onload = function() {
+    createSparkleEffect();
+};
 
-// Mousemove Color Change Effect
-document.addEventListener("mousemove", (event) => {
-    const x = event.clientX / window.innerWidth;
-    const y = event.clientY / window.innerHeight;
-    document.body.style.backgroundColor = `rgba(${200 + x * 55}, ${150 + y * 55}, ${255 - x * 100}, 0.8)`;
-});
+function createSparkleEffect() {
+    const sparkleContainer = document.querySelector('.sparkle-container');
+
+    // Check if the container exists
+    if (!sparkleContainer) {
+        console.error('Sparkle container not found');
+        return;
+    }
+
+    sparkleContainer.addEventListener('mousemove', (event) => {
+        const sparkles = document.querySelectorAll('.sparkle');
+        if (!sparkles || sparkles.length === 0) {
+            console.error('No sparkles found');
+            return;
+        }
+
+        // Generate a sparkle at the cursor position
+        const sparkle = sparkles?.[0];
+        if (sparkle) {
+            sparkle.style.left = `${event.clientX}px`;
+            sparkle.style.top = `${event.clientY}px`;
+            sparkle.classList.add('active');
+        }
+    });
+}
+// Add sparkle effect for both mousemove and touchmove events
+document.addEventListener("mousemove", createSparkleEffect);
+document.addEventListener("touchmove", createSparkleEffect);
+
+
+
+
+
