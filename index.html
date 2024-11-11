@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Subhendu Bhattacharyya - Project CODE</title>
+    <title>Subhendu Bhattacharyya - Personal Website</title>
     <style>
         /* General Styling */
         body {
@@ -69,12 +69,12 @@
             flex: 3;
         }
         .profile-picture {
-            flex: 1; /* This allows the profile picture to take up available space in the flex container */
-            max-width: 200px; /* Limits the maximum width of the profile picture */
-            height: auto; /* Keeps the aspect ratio of the image */
-            border-radius: 10px; /* Rounds the corners of the profile picture */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow effect */
-            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adds transition effects on hover */
+            flex: 1;
+            max-width: 200px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .profile-picture:hover {
             transform: scale(1.05);
@@ -98,15 +98,14 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
-    #about {
-        flex-direction: column; /* Changes the layout to a column on smaller screens */
-        align-items: center; /* Centers the items */
-    }
-    .profile-picture {
-        margin-top: 20px; /* Adds a margin above the profile picture */
-    }
-}
-        
+            #about {
+                flex-direction: column;
+                align-items: center;
+            }
+            .profile-picture {
+                margin-top: 20px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -121,18 +120,25 @@
             </ul>
         </nav>
 
-        <section id="about" class="tab-content active">
-            <div class="about-text">
-                <h2>Few Line About Me</h2>
-                <p>An enthusiastic Cloud Architect boasting over a decade of extensive expertise...</p>
-                <p>Proficient in devising infrastructure strategies and facilitating transformations...</p>
-                <p>This website is a result of Project CODE. I kept this code/repo open for everyone...</p>
-            </div>
-            <!-- Profile Picture -->
-            <div class="profile-picture">
-                <img src="your_profile_picture.jpeg" alt="Profile Picture">
-            </div>
-        </section>
+        <!-- Content Sections -->
+        <div id="content">
+            <section id="about" class="tab-content active">
+                <div class="about-text">
+                    <h2>About Me</h2>
+                    <p>A lifelong learner and enthusiastic Cloud Architect, AI-ready and future-focused, with over a decade of expertise across Microsoft Infrastructure Solutions, including experience in the training sector.</p> 
+                    <p>As an IT specialist, I have a proven track record in designing efficient hybrid IT managed services and leading large-scale global infrastructure projects. Skilled in developing infrastructure strategies, identifying solution gaps, and implementing transformative solutions to ensure on-time, cost-effective project delivery. A seasoned leader, I leverage architectural methodologies and facilitate organizational changes to adapt workflows to evolving business needs and emerging AI capabilities.</p>
+                    <h2>About This Website</h2> 
+                    <p> I want you to have your own personla website to showcase youor talent. This is Poject CODE. Follow the instruction to build your own website using GitHub Pages. This Repo and ReadMe is under development.
+
+
+                        <p>🌐 Personal Portfolio Website 🌐</p>
+                        
+                        <p>This is a personal portfolio website built with HTML, CSS, and JavaScript to showcase your professional profile, achievements, certifications, and projects. It is designed to be responsive, dynamic, and visually appealing, providing visitors with a glimpse of your expertise and accomplishments.</p>
+                    </p>
+                </div>
+                <!-- Profile Picture with Glow Effect -->
+                <img src="your_profile_picture.jpeg" alt="Profile Picture" class="profile-picture">
+            </section>
 
             <section id="achievements" class="tab-content">
                 <h2>Professional Achievements</h2>
@@ -219,6 +225,5 @@
         document.addEventListener("mousemove", createSparkleEffect);
         document.addEventListener("touchmove", createSparkleEffect);
     </script>
-
 </body>
 </html>
