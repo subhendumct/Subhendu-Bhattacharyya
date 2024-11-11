@@ -119,15 +119,15 @@ nav ul li a:hover {
     align-items: center;
 }
 
-.profile-picture {
-    max-width: 150px;
-    height: auto;
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.profile-picture img {
+    width: 100%;
+    max-width: 200px; /* Limits the maximum width */
+    height: auto; /* Maintains the aspect ratio */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
-.profile-picture:hover {
+.profile-picture img:hover {
     transform: scale(1.05);
     box-shadow: 0 0 20px 10px rgba(255, 165, 0, 0.6);
 }
