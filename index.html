@@ -69,20 +69,17 @@
             flex: 3;
         }
         .profile-picture {
-            flex: 1;
-            max-width: 200px;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            flex: 1; /* This allows the profile picture to take up available space in the flex container */
+            max-width: 200px; /* Limits the maximum width of the profile picture */
+            height: auto; /* Keeps the aspect ratio of the image */
+            border-radius: 10px; /* Rounds the corners of the profile picture */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow effect */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adds transition effects on hover */
         }
         .profile-picture:hover {
             transform: scale(1.05);
             box-shadow: 0 0 20px 10px rgba(255, 165, 0, 0.6);
         }
-
-
-        
 
         /* Sparkle Effect */
         .sparkle {
@@ -138,6 +135,9 @@
                 <div class="profile-picture">
                      <img src="your_profile_picture.jpeg" alt="Profile Picture">
                 </div>
+
+
+
         </div>
 
 
