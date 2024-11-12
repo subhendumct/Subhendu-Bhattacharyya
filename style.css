@@ -101,3 +101,28 @@ nav ul li a:hover {
         margin-top: 20px;
     }
 }
+
+/* Navigation Tabs Styling */
+.nav-menu {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.nav-menu button {
+    background: none;
+    border: none;
+    font-weight: normal;
+    cursor: pointer;
+    color: #0073e6;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+/* Hover Effect for Tabs */
+.nav-menu button:hover {
+    font-size: 18px; /* Increase font size on hover */
+    font-weight: bold; /* Make text bold on hover */
+    color: #005bb5; /* Darker shade for better visibility */
+    transform: scale(1.1); /* Slightly scale up for emphasis */
+}

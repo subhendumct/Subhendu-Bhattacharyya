@@ -1,5 +1,8 @@
-I want you to have your own personla website to showcase youor talent. This is Poject CODE. Follow the instruction to build your own website using GitHub Pages. This Repo and ReadMe is under development.
+Welcome!!
 
+Idea: I want you to have your own personla website to showcase your talent. This website is outcome of my internal Poject name "Project CODE". Doesn't matter you are a developers or admin or an architect like me or can write code or not you can follow this website or project to build your own website. Hoenstly I haven't written a single line of code to build this website. I am have used some of the AI tools to build this website. Follow the instruction to build your own website using GitHub Pages. This Repo and ReadMe is under development.
+
+Introduction:
 
 🌐 Personal Portfolio Website 🌐
 
@@ -47,7 +50,7 @@ Prerequisites
 	•	A code editor like VSCode.
 	•	Basic knowledge of HTML, CSS, and JavaScript (optional).
 
-🔄 Setup & Installation
+🔄 Setup & Installation for an advance user. If you are an beginer then scroll down and follow the instruction made for beginer:
 
 Step 1: Fork and Clone the Repository
 
@@ -118,3 +121,5 @@ Feel free to connect with me:
 📝 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
+
+

@@ -44,6 +44,15 @@ document.addEventListener("mousemove", createSparkleEffect);
 document.addEventListener("touchmove", createSparkleEffect);
 
 
+function showTab(tabId) {
+    const tabs = document.querySelectorAll('.tab-content');
+    tabs.forEach(tab => tab.classList.remove('active'));
+    document.getElementById(tabId).classList.add('active');
+}
 
+// Set the default tab on page load
+document.addEventListener("DOMContentLoaded", () => {
+    showTab('about');
+});
 
 
